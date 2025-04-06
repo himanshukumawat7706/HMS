@@ -22,8 +22,8 @@ function SignUp() {
       const handleSubmit = async (e) => {
         console.log(data);
         e.preventDefault();
-        axiosInstance
-          .post("/auth/register", data)
+        axios
+          .post("https://hms-l3jy.vercel.app/auth/register", data)
           .then((res) => {
             if (res.data.message === "Success") {
               navigate("/sign-in");
